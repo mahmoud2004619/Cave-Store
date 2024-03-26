@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========================== Navbar ========================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 70px;
+    background: #243338;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+nav .navbar {
+    height: 100%;
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 50px;
+}
+
+.navbar .logo a {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav .navbar .nav-links {
+    line-height: 70px;
+    height: 100%;
+}
+
+nav .navbar .nav-links .store-page {
+    height: 70px;
+    border-bottom: solid white 2px;
+}
+
+nav .navbar .links {
+    display: flex;
+}
+
+nav .navbar .links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 14px;
+}
+
+nav .navbar .links li a {
+    height: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav .navbar .links li a:hover {
+    border-bottom: white solid 2px;
+    height: 70px;
+}
+
+.navbar .search-box {
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.navbar .search-box i {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar .search-box i:hover {
+    background-color: rgba(128, 128, 128, 0.425);
+    border-radius: 50%;
+}
+
+.navbar .search-box .input-box {
+    position: absolute;
+    right: calc(100% - 40px);
+    top: 80px;
+    height: 60px;
+    width: 300px;
+    background: #243338;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.navbar.showInput .search-box .input-box {
+    top: 65px;
+    opacity: 1;
+    pointer-events: auto;
+    background: #243338;
+}
+
+.search-box .input-box::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #243338;
+    right: 10px;
+    top: -6px;
+    transform: rotate(45deg);
+}
+
+.search-box .input-box input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    border: none;
+}
+
+.navbar .nav-links .sidebar-logo {
+    display: none;
+}
+
+.navbar .bx-menu {
+    display: none;
+}
+
+@media (max-width:920px) {
+    nav .navbar {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+
+    nav .navbar .logo a {
+        font-size: 27px;
+    }
+
+    nav .navbar .links li {
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+
+    nav .navbar .links li a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:800px) {
+    .navbar .bx-menu {
+        display: block;
+    }
+
+    nav .navbar .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: block;
+        max-width: 270px;
+        width: 100%;
+        background: #243338;
+        line-height: 40px;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease;
+        z-index: 1000;
+    }
+
+    .navbar .nav-links .sidebar-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sidebar-logo .logo-name {
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .sidebar-logo i,
+    .navbar .bx-menu {
+        font-size: 25px;
+        color: #fff;
+    }
+
+    nav .navbar .links {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:370px) {
+    nav .navbar .nav-links {
+        max-width: 100%;
+    }
+}
+
+/* ========================== End Navbar ========================== */
+
+/* ========================== Start Header ========================== */
+header {
+    margin-top: 72px;
+    background-image: url('images/store-page.png');
+    background-position: center;
+    text-align: center;
+    align-content: center;
+    height: 150px;
+    color: #243338;
+}
+
+/* ========================== End Header ========================== */
+
+/* ========================== Start Section1 ========================== */
+.sec1 {
+    padding-block:3%;
+    padding-inline:10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec1 h3 {
+    margin-left: -33px;
+    color: #243338;
+}
+
+.sec1 select {
+    border: solid 2px #243338;
+    width: 150px;
+}
+/* ========================== End Section1 ========================== */
+/* ========================== Section 2 ========================== */
+.sec_2 {
+    position: relative;
+}
+
+.sec_2 .photo-collection {
+    width: 230px;
+    height: 270PX;
+    overflow: hidden;
+}
+
+.sec_2 img {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    filter: grayscale(0);
+}
+
+.sec_2 img:hover {
+    filter: grayscale(.5);
+    transform: scale(1.2);
+}
+
+.sec_2 h1 {
+    text-align: center;
+    padding: 4%;
+    font-family: PlayfairDisplay-Bold;
+    font-weight: bolder;
+}
+
+.sec_2 h6:hover {
+    color: rgb(50, 122, 204);
+    cursor: pointer;
+}
+
+.sec_2 i {
+    color: gold;
+}
+
+.sec_2 .evaluation {
+    color: gray;
+    font-size: 12px;
+}
+
+.sec_2 .more_title {
+    cursor: pointer;
+    color: #243338;
+    border: #243338 solid 1px;
+    padding: 10px;
+}
+
+.sec_2 .more_title:hover {
+    background-color: #243338;
+    color: white;
+}
+
+.sec_2 .more_title .next-page{
+    padding-top: 20px;
+    color: #243338;
+    font-size: 20px;
+}
+
+.sec_2 .more_title .next-page:hover {
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .sec_2 {
+        text-align: center;
+    }
+
+    .sec_2 .photo-collection {
+        text-align: center;
+        margin-left: 25%;
+    }
+}
+/* ========================== End Section 2 ========================== */
+
+/* ========================== Footer ========================== */
+footer {
+    margin-top: 5%;
+    color: white;
+    background-color: #243338da;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .foot_botton {
+    background-color: #243338e8;
+    text-align: center;
+    color: white;
+}
+
+/* ========================== End Footer ========================== */
